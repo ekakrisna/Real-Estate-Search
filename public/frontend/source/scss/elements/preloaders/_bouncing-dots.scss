@@ -1,0 +1,28 @@
+.bouncing-dots {
+    width: 4.375rem;
+    text-align: center;
+
+    & > .bouncer {
+        width: .75rem;
+        height: .75rem;
+        background-color: $preloader-color;
+      
+        border-radius: 100%;
+        display: inline-block;
+
+        @include animation( bouncing-dots 1.4s infinite ease-in-out both );
+    }
+      
+    & > .bounce-1 {
+        @include animation-delay( -0.32s );
+    }
+      
+    & > .bounce-2 {
+        @include animation-delay( -0.16s );
+    }
+}
+
+@include keyframes( bouncing-dots ){
+    0%, 80%, 100% { @include scale( 0 )}
+    40% { @include scale( 1.0 )}
+}

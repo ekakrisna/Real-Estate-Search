@@ -1,0 +1,70 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+// Support Utilities Style
+// --------------------------------------------------------------------------
+
+.content{
+    .content-footer{
+        .pagination{
+            margin: 0;
+            padding-top: 2.5rem;
+            @include align-items( center );
+            @include justify-content( center );
+
+            .page-item{
+                .page-link{
+                    color: #646464;
+                    border: 1px solid #CACACA;
+                    padding: 0.5rem 1rem;
+                    text-align: center;
+                }
+                &.active .page-link{
+                    background: transparent;
+                    color:#DE8E17;
+                    border-color: #CACACA;
+                }
+            }
+        }
+        @include breakpoint-down(md){
+            .pagination{
+
+                @include flex(0);
+                @include align-items( start );
+                @include justify-content( start );
+
+                .page-item{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+$color-primary: #FE4B44;
+$color-disabled: #6c757d;
+.pagination-primary {
+    .page-link {
+        color: $color-primary;
+        @include transition( background-color .3s );
+
+        &:focus {
+            @include box-shadow( none );
+        }
+    }
+
+    .page-item {
+        &.active {
+            .page-link {
+                color: #fff;
+                border-color: transparent;
+                background-color: $color-primary;
+            }
+        }
+        &.disabled {
+            .page-link {
+                color: $color-disabled;
+            }
+        }
+    }
+}

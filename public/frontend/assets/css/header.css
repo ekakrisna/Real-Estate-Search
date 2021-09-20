@@ -1,0 +1,387 @@
+.menu-navbar-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px #00000029;
+  z-index: 999;
+  overflow-x: hidden;
+}
+
+.menu-navbar-top .content-search {
+  position: relative;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form {
+  position: relative;
+  width: 100%;
+  max-width: 18.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .fa-search {
+  position: absolute;
+  left: 1.625rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search {
+  padding-left: 2.625rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background: #f5f2e9;
+  border: 0;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search:focus,
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search::-webkit-input-placeholder {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search::-moz-placeholder {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search:-ms-input-placeholder {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search::-ms-input-placeholder {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+
+.menu-navbar-top .content-search .form-search .inline-form .form-control-search::placeholder {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+}
+
+.menu-navbar-top .content-menu {
+  position: relative;
+}
+
+.menu-navbar-top .content-menu .menu-top {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+
+.menu-navbar-top .content-menu .menu-top li:first-child {
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .menu-navbar-top .content-menu .menu-top li:first-child {
+    margin-right: 1.25rem;
+  }
+}
+
+.menu-navbar-top .content-menu .menu-top li a {
+  position: relative;
+  display: block;
+}
+
+.menu-navbar-top .content-menu .menu-top li a.active {
+  background: #f5f2e9;
+  padding: 1rem 1.5rem 1.1875rem;
+}
+
+.menu-navbar-top .content-menu .menu-top li a.active-close {
+  background: #888888 !important;
+}
+
+.menu-navbar-top .content-menu .menu-top li a img {
+  width: 1.5rem;
+}
+
+.menu-navbar-top .content-menu .menu-top li a .badge-notif {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  font-size: 0.625rem;
+  background: #fe4b44;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.sideright-menu {
+  position: fixed;
+  top: 3.875rem;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 93;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sideright-menu .sideright-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-animation: fadeIn 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: fadeIn 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sideright-menu .content-sideright {
+  position: relative;
+  width: 20rem;
+  height: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-animation: sidebarRightEnter 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: sidebarRightEnter 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .sideright-menu .content-sideright {
+    overflow-y: auto;
+  }
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu {
+  background: #ffffff;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li a {
+  display: block;
+  padding: 1rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li a:hover i,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li a:hover span {
+  color: #fe4b44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li a img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li a span {
+  -webkit-transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  color: #303030;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round {
+  padding: 14px;
+  position: relative;
+  text-align: center;
+  background: #FE4B44;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round span {
+  color: #ffffff;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:hover,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:active,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:focus {
+  background: #ffffff !important;
+  border: 2px solid #fe4b44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:hover span,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:active span,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-red-round:focus span {
+  color: #fe4b44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round {
+  padding: 14px;
+  position: relative;
+  text-align: center;
+  background: #ffffff;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #FE4B44;
+  width: 100%;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round span {
+  color: #FE4B44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:hover,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:active,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:focus {
+  background: #FE4B44 !important;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:hover span,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:active span,
+.sideright-menu .content-sideright .sidetop-sideright .list-menu li .list .btn-white-round:focus span {
+  color: #ffffff !important;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon {
+  background: #f5f2e9;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li {
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0.875rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li a {
+  display: block;
+  padding: 1rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li a:hover span {
+  color: #fe4b44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li a img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li a span {
+  -webkit-transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  color: #303030;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-menu-icon li a i {
+  float: right;
+  font-size: 27px;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-arrow {
+  position: relative;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-arrow li {
+  position: relative;
+  padding: 0.875rem 1rem;
+  line-height: 1;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-arrow li a:hover span {
+  color: #fe4b44;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-arrow li a span {
+  -webkit-transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.5s all cubic-bezier(0.19, 1, 0.22, 1);
+  color: #303030;
+}
+
+.sideright-menu .content-sideright .sidetop-sideright .list-arrow li a i {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  background: #fe4b44;
+  font-size: 0.75rem;
+  color: #ffffff;
+  padding-top: 3px;
+}
+
+@media (max-width: 991.98px) {
+  .sideright-menu .content-sideright .sidebot-sideright.pb-login {
+    padding-bottom: 4rem;
+  }
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .qr-content {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .qr-content img {
+  width: 100%;
+  max-width: 8.125rem;
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .logo-footer-sideright {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .logo-footer-sideright img {
+  width: 100%;
+  max-width: 11.4375rem;
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .copyright-sideright {
+  margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  background: #f5f2e9;
+}
+
+.sideright-menu .content-sideright .sidebot-sideright .copyright-sideright span {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #303030;
+}
+
+.menu-navbar-bottom {
+  position: static;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px #00000029;
+  z-index: 999;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0.75rem;
+}
+

@@ -1,0 +1,93 @@
+$screens: 'xs', 'sm', 'md', 'lg';
+// $columns: 32px, 40px, 50px, 60px, 64px, 75px, 80px, 90px, 100px, 112px, 120px, 125px, 128px, 140px, 150px, 160px, 175px, 180px, 200px, 220px, 225px, 240px, 250px, 256px, 280px, 300px, 320px,
+//     340px, 350px, 360px, 380px, 400px, 460px, 480px, 500px, 520px, 560px, 580px, 600px;
+$columns: 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 180px, 190px, 200px,
+    210px, 220px, 230px, 240px, 250px, 260px, 270px, 280px, 290px, 300px, 310px, 320px, 330px, 340px, 350px, 360px, 370px, 380px, 390px, 400px,
+    410px, 420px, 430px, 440px, 450px, 460px, 470px, 480px, 490px, 500px, 510px, 520px, 530px, 540px, 550px, 560px, 570px, 580px, 590px, 600px;
+$selectors: ();
+
+@for $screenIndex from 1 through length( $screens ){
+    $screen: nth( $screens, $screenIndex );
+    @for $columnIndex from 1 through length( $columns ){
+        $column: nth( $columns, $columnIndex );
+        @if 'xs' == $screen {
+            $selectors: append( $selectors, '.col-#{$column}' );
+        } @else {
+            $selectors: append( $selectors, '.col-' +$screen+ '-' +$column );
+        }
+    }
+}
+
+$selectors: join( $selectors, (), comma );
+
+#{$selectors} {
+    width: 100%;
+    position: relative;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+@each $column in $columns {
+    .col-#{$column} {
+        max-width: rem( $column );
+        @include flex( 0 0 rem( $column ));
+    }
+}
+.col-auto { width: auto }
+
+@include breakpoint-up( sm ){
+    @each $column in $columns {
+        .col-sm-#{$column} {
+            max-width: rem( $column );
+            @include flex( 0 0 rem( $column ));
+        }
+    }
+    .col-sm-auto { 
+        width: auto;
+        max-width: 100%;
+        @include flex( 0 0 auto );
+    }
+}
+
+@include breakpoint-up( md ){
+    @each $column in $columns {
+        .col-md-#{$column} {
+            max-width: rem( $column );
+            @include flex( 0 0 rem( $column ));
+        }
+    }
+    .col-md-auto {
+        width: auto;
+        max-width: 100%;
+        @include flex( 0 0 auto );
+    }
+}
+
+@include breakpoint-up( lg ){
+    @each $column in $columns {
+        .col-lg-#{$column} {
+            max-width: rem( $column );
+            @include flex( 0 0 rem( $column ));
+        }
+    }
+    .col-lg-auto {
+        width: auto;
+        max-width: 100%;
+        @include flex( 0 0 auto );
+    }
+}
+
+@include breakpoint-up( xl ){
+    @each $column in $columns {
+        .col-xl-#{$column} {
+            max-width: rem( $column );
+            @include flex( 0 0 rem( $column ));
+        }
+    }
+    .col-xl-auto {
+        width: auto;
+        max-width: 100%;
+        @include flex( 0 0 auto );
+    }
+}
+

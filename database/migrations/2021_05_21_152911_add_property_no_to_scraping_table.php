@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddPropertyNoToScrapingTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('scrapings', function (Blueprint $table) {
+            // "property_no" is abolished!! please refer "*_publish.property_number"
+            $table->bigInteger('property_no')->unsigned()->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('scrapings', function (Blueprint $table) {
+            //
+        });
+    }
+}

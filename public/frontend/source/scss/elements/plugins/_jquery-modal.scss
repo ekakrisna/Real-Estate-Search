@@ -1,0 +1,25 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// jQuery Modal
+// --------------------------------------------------------------------------
+.jquery-modal {
+    &.blocker {
+        z-index: 9000;
+        @include flexbox;
+        @include align-items( center );
+        @include justify-content( center );
+    }
+
+    .modal {
+        overflow: visible;
+        height: auto;
+    }
+}
+
+// Hide native Bootstrap modal overlay
+.modal-backdrop {
+    //display: none
+}
+// --------------------------------------------------------------------------

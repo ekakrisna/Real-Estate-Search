@@ -1,0 +1,167 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+// Support Utilities Style
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+// Size Padding 120 and Margin 120
+// --------------------------------------------------------------------------
+@include breakpoint-up(lg){
+    .pt-lg-120{
+        padding-top: 7.5rem;
+    }
+    .pb-lg-120{
+        padding-bottom: 7.5rem;
+    }
+    .py-lg-120{
+        padding-top: 7.5rem;
+        padding-bottom: 7.5rem;
+    }
+    .mt-lg-120{
+        margin-top: 7.5rem;
+    }
+    .mb-lg-120{
+        margin-bottom: 7.5rem;
+    }
+    .my-lg-120{
+        margin-top: 7.5rem;
+        margin-bottom: 7.5rem;
+    }
+}
+.pt-120{
+    padding-top: 7.5rem;
+}
+.pb-120{
+    padding-bottom: 7.5rem;
+}
+.py-120{
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.mt-120{
+    margin-top: 7.5rem;
+}
+.mb-120{
+    margin-bottom: 7.5rem;
+}
+.my-120{
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+}
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Size Padding 80 and Margin 80
+// --------------------------------------------------------------------------
+@include breakpoint-up(lg){
+    .pt-lg-80{
+        padding-top: 5rem;
+    }
+    .pb-lg-80{
+        padding-bottom: 5rem;
+    }
+    .py-lg-80{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .mt-lg-80{
+        margin-top: 5rem;
+    }
+    .mb-lg-80{
+        margin-bottom: 5rem;
+    }
+    .my-lg-80{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+.pt-80{
+    padding-top: 5rem;
+}
+.pb-80{
+    padding-bottom: 5rem;
+}
+.py-80{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.mt-80{
+    margin-top: 5rem;
+}
+.mb-80{
+    margin-bottom: 5rem;
+}
+.my-80{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Size Padding 56 and Margin 56
+// --------------------------------------------------------------------------
+@include breakpoint-up(lg){
+    .pt-lg-56{
+        padding-top: 3.5rem;
+    }
+    .pb-lg-56{
+        padding-bottom: 3.5rem;
+    }
+    .py-lg-56{
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    .mt-lg-56{
+        margin-top: 3.5rem;
+    }
+    .mb-lg-56{
+        margin-bottom: 3.5rem;
+    }
+    .my-lg-56{
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+.pt-56{
+    padding-top: 3.5rem;
+}
+.pb-56{
+    padding-bottom: 3.5rem;
+}
+.py-56{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.mt-56{
+    margin-top: 3.5rem;
+}
+.mb-56{
+    margin-bottom: 3.5rem;
+}
+.my-56{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+// --------------------------------------------------------------------------
+
+.link-blue{
+    color: #32A9E2;
+    text-decoration: underline;
+}
+@include breakpoint-up(xl){
+    .container-980 {
+        padding: 0 0.9375rem;
+        max-width: 63.125rem !important;
+    }
+}
+.fit-cover { object-fit: cover !important }
+.fit-contain { object-fit: contain !important }
+
+.pointer-events-auto, .pe-auto { pointer-events: auto !important }
+.pointer-events-none, .pe-none { pointer-events: none !important }
+
+.cursor-pointer { cursor: pointer !important }

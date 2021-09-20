@@ -1,0 +1,97 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "awobaz/compoships": "^2.0",
+        "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "6.3",
+        "intervention/image": "^2.5",
+        "laravel/framework": "^6.2",
+        "laravel/socialite": "^5.1",
+        "laravel/tinker": "^1.0",
+        "league/csv": "^8.0",
+        "league/flysystem": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "league/flysystem-cached-adapter": "^1.0",
+        "nesbot/carbon": "^2.25",
+        "olssonm/l5-very-basic-auth": "^6.3",
+        "pusher/pusher-php-server": "~3.0",
+        "sendgrid/sendgrid": "^7.9",
+        "socialiteproviders/instagram": "^4.1",
+        "socialiteproviders/instagram-basic": "^4.1",
+        "socialiteproviders/line": "^4.1",
+        "stephenjude/default-model-sorting": "^1.2",
+        "stillat/numeral.php": "^2.0",
+        "tholu/php-packer": "^0.2.0",
+        "xyyolab/faker-japanese": "^1.0",
+        "yajra/laravel-datatables-oracle": "~9.0"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.4",
+        "fzaninotto/faker": "^1.4",
+        "laravel/dusk": "^5.8",
+        "laravel/ui": "^1.1",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "oscarafdev/migrations-generator": "^2.0",
+        "phpunit/phpunit": "^8.0",
+        "reliese/laravel": "^0.0.18"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform": {
+            "php": "7.2.5"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "app/Helpers/AssetFunctionHelper.php",
+            "app/Helpers/MinifierHelper.php",
+            "app/Helpers/UnitHelper.php",
+            "app/Helpers/FormatterHelper.php",
+            "app/Helpers/LocationHelper.php",
+            "app/Helpers/ChatworkHelper.php",
+            "app/Helpers/ChatworkCustomizedHelper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

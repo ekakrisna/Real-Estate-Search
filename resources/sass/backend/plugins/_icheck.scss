@@ -1,0 +1,34 @@
+#app {
+    [class*=icheck-]{
+        & > label {
+            @include transition( opacity .15s $easeOutExpo );
+        }
+        & > input:first-child + label {
+            &:before {
+                border-radius: .1875rem;
+            }
+        }
+    }
+
+    .icheck-sm {
+        & > label {
+            padding-left: 22px !important;
+        }
+        & > input:first-child,
+        & > input:first-child + input[type="hidden"]{
+            & + label:before {
+                top: 4px;
+                margin-left: -22px;
+                width: 16px; height: 16px;
+            }
+        }
+
+        & > input:first-child:checked,
+        & > input:first-child:checked + input[type="hidden"]{
+            & + label:after {
+                top: 3px; left: -2px;
+                width: 5px; height: 8px;
+            }
+        }
+    }
+}

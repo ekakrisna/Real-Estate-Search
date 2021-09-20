@@ -1,0 +1,494 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Settings
+// --------------------------------------------------------------------------
+.section-setting{
+    position: relative;
+    overflow-x: hidden;
+    padding: 3rem 0;
+
+    @include breakpoint-down(md){
+        padding: 2rem 0;
+    }
+
+    .content{
+
+        .content-body{
+
+            .form-setting{
+                .desc{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                .pb-53{
+                    padding-bottom: 3.3125rem;
+
+                    @include breakpoint-down(md){
+                        padding-bottom: 1.75rem;
+                    }
+                }
+                .mt-48{
+                    margin-top: 3rem;
+
+                    @include breakpoint-down(md){
+                        margin-top: 2rem;
+
+                        &.mt-48-sp{
+                            margin-top: 3rem!important;
+                        }
+                    }
+                }
+                .label-form{
+                     font-size: 1rem;
+                     color: $blackColor_01;
+                     font-weight: 700;
+                     padding-bottom: .75rem;
+                }
+                .input-flag{
+
+                    .form-group{
+                        @include flexbox;
+                        @include align-items(center);
+
+                        .form-label-flag{
+                            position: relative;
+                            width: 100%;
+
+                            .form-control{
+                                background: $bg_input;
+                                border: 0;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                padding-left: 3.5rem;
+                                padding-top: .75rem;
+                                padding-bottom: .75rem;
+                                outline: none;
+                                box-shadow: none;
+                                height: auto;
+                                border-radius: .25rem;
+                            }
+                            .icon-flag{
+                                position: absolute;
+                                top: 50%;
+                                left: 1rem;
+                                width: 1.5rem;
+                                @include translateY(-50%);
+                            }
+                        }
+                        .btn-minus{
+                            position: relative;
+                            display: inline-block;
+                            margin-left: 1rem;
+
+                            img{
+                                width: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .content-area-fav{
+                    position: relative;
+                    padding: 1.5rem 1rem;
+                    border-radius: .25rem;
+                    background: $secondaryColor;
+
+                    @include breakpoint-down(md){
+                        padding: 1rem;
+                    }
+
+                    .parsley-errors-list{
+                        position: absolute;
+                        top: 3.75rem;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+
+                        .parsley-required{
+                            font-size: 1rem;
+                            font-weight: 700;
+                            color: $blackColor_02;
+                        }
+                    }
+
+                    .select-required{
+                        position: relative;
+                        width: 100%;
+
+                        .fa{
+                            right: 1.25rem;
+                        }
+
+                        .form-control{
+                            &.parsley-error{
+                                .mb-28{
+                                    display: block!important;
+                                }
+                            }
+                        }
+                        option[value=""][disabled] {
+                            color: $blackColor_02;
+                        }
+                    }
+                    .mb-28{
+                        display: none;
+                        margin-bottom: 1.75rem;
+                    }
+
+                    .label-with-icon{
+                        @include flexbox;
+                        @include align-items(center);
+                        margin-bottom: 1rem;
+
+                        img{
+                            width: 1.5rem;
+                            margin-right: 1rem;
+                        }
+                        .text-label{
+                            font-size: 1rem;
+                            font-weight: 700;
+                            color: $blackColor_01;
+                        }
+                    }
+                }
+                
+                .form-setting-customer {
+                    .parsley-errors-list {
+                        position: absolute;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: $blackColor_02;                        
+                    }
+
+                    .select-required {
+                        position: relative;
+                        width: 100%;
+
+                        .fa {
+                            right: 1.25rem;
+                        }
+                    }
+                }
+
+                select{
+                    &.form-control{
+                        position: relative;
+                        outline: none;
+                        box-shadow: none;
+                        border: none;
+                        height: auto;
+                        padding: 0.75rem 2.5rem 0.75rem 1rem;
+                        font-size: 1rem;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+                }
+                .fa-chevron-down{
+                    position: absolute;
+                    top: 50%;
+                    right: 2.25rem;
+                    color: $blackColor_02;
+                    @include translateY(-50%);
+                }
+
+                .content-land{
+                    position: relative;
+                }
+
+                .form-group{
+                    margin-bottom: 1.5rem;
+
+                    label{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: $blackColor_01;
+                        margin-bottom: .75rem;
+                    }
+                    .form-control-red-left{
+                        background: $secondaryColor;
+                        font-size: 1rem;
+                        border:0;
+                        border-radius: .25rem;
+                        outline: none;
+                        box-shadow: none;
+                        padding: .75rem 1rem;
+                        height: auto;
+                        min-height: 45px;
+                    }
+                    .form-control-setting{
+                        font-size: 1rem;
+                        border:0;
+                        border-radius: .25rem;
+                        outline: none;
+                        box-shadow: none;
+                        padding: .75rem 1rem;
+                        height: auto;
+                    }
+
+                    .edit-email{
+                        margin-bottom: .75rem;
+
+                        img{
+                            width: 1.5rem;
+                            margin-right: .5rem;
+                        }
+                        span{
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                 .form-caution{
+                     padding: 1rem;
+                     background: $secondaryColor;
+
+                     .label-caution{
+                         font-weight: 400;
+                         font-size: 1rem;
+                         margin-bottom: 0;
+                     }
+                 }
+
+                 .content-note{
+                     position: relative;
+                     margin-top: 4rem;
+                     padding: 2rem;
+                     background: $secondaryColor;
+                     border-radius: .25rem;
+
+                     @include breakpoint-down(md){
+                         margin-top: 3rem;
+                         padding: 1rem;
+                     }
+
+                     .text{
+                         font-size: 1rem;
+                         font-weight: 400;
+                         color: $blackColor_01;
+                         margin-bottom: 2rem;
+                     }
+
+                     .btn-black-border{
+                         border:3px solid $blackColor_02;
+
+                         &:hover, &:focus {
+                             background:$blackColor_02!important;
+
+                             span{
+                                 color: $baseColor_02!important;
+                             }
+                         }
+
+                         span{
+                             color: $blackColor_02!important;
+                         }
+                     }
+                 }
+            }
+        }
+    }
+}
+
+.btn-black-border{
+    border:3px solid $blackColor_02;
+
+    &:hover, &:focus {
+        background:$blackColor_02!important;
+
+        span{
+            color: $baseColor_02!important;
+        }
+    }
+
+    span{
+        color: $blackColor_02!important;
+    }
+}
+
+.section-setting-notif{
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 8rem;
+
+    .content{
+        .title{
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: $blackColor_01;
+            padding-bottom: 1.6875rem;
+        }
+        .desc{
+            font-size: 1rem;
+            font-weight: 400;
+            padding-bottom: 3.1875rem;
+
+            @include breakpoint-down(md){
+                padding-bottom: 2.1875rem;
+            }
+        }
+    }
+}
+
+.section-option-list{
+    position: relative;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+    overflow-x: hidden;
+
+    @include breakpoint-down(md){
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+
+    .content{
+
+        .content-header{
+            padding-bottom: 1.625rem;
+
+            .title{
+                font-size: 1.125rem;
+                font-weight: 700;
+            }
+        }
+        .content-body{
+            .content-list{
+                padding: 1.5rem;
+                background: $baseColor_02;
+                color: $blackColor_01;
+
+                .text{
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.6;
+                }
+                .subtitle{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    padding-top: 2rem;
+                    padding-bottom: .75rem;
+                }
+                ol{
+                    padding-left: 1rem;
+                    margin-bottom: 0;
+
+                    li{
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.6;
+                        padding-bottom: 1.125rem;
+
+                        &.pb-44{
+                            padding-bottom: 2.75rem;
+                        }
+
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+
+                        span{
+                            position: relative;
+                            left: .5rem;
+                        }
+
+                        .child{
+                            padding-top: 1.125rem;
+                            padding-left: 1.5625rem;
+                            margin-bottom: 0;
+
+                            li{
+                                padding-bottom: 2rem;
+
+                                &:last-child{
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.company-list{
+    position: relative;
+
+    @include breakpoint-down(md){
+        height: calc(100vh - 8.75rem);
+    }
+
+     .item-list{
+         @include flexbox;
+         font-size: 1rem;
+         color: $blackColor_01;
+         font-weight: 400;
+         padding-bottom: 1.125rem;
+
+         &:last-child{
+             padding-bottom: 0;
+         }
+
+         .list-title{
+             min-width: 4.0625rem;
+             margin-right: 2rem;
+         }
+         .list-text{
+             line-height: 1.6;
+         }
+     }
+}
+
+.password-section{
+    position: relative;
+    background: $baseColor_01;
+    padding: 3rem 0;
+    overflow-x: hidden;
+
+    @include breakpoint-down(md){
+        padding: 2rem 0;
+    }
+
+    .title-pages{
+        margin-bottom: 1.5rem;
+    }
+    .desc{
+        font-size: 1rem;
+        font-weight: 400;
+        padding-bottom: 1.6875rem;
+    }
+    .content-body{
+        .form{
+
+            label{
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .mb-48{
+                margin-bottom: 3rem;
+
+                @include breakpoint-down(md){
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .form-control{
+                border:0;
+            }
+        }
+        .separator{
+            border-width: 2px;
+            border-color: #C7C7C7;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+
+            @include breakpoint-down(md){
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

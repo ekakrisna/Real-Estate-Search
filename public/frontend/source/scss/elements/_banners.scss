@@ -1,0 +1,133 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Banners
+// --------------------------------------------------------------------------
+.banners {
+    position: relative;
+    width: 100%;
+
+    .figure {
+        margin-bottom: 0;
+        width: 100%;
+
+        .banners-images {
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+            margin-bottom: 0;
+            max-height: 32.9375rem;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .banners-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+
+        .title {
+            font-size: 1.5rem;
+            line-height: 2.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            line-height: 1.625rem;
+        }
+    }
+}
+
+@include breakpoint-down(md) {
+    .banners {
+        .figure {
+            .banners-images {
+                min-height: 26.25rem;
+            }
+        }
+    }
+}
+
+#grandsaison {
+    transition: 600ms all cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.banner-fixed-right{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    @include translateY(-50%);
+    z-index: 3;
+
+    @include breakpoint-down(md){
+        display: none;
+    }
+
+    a{
+        cursor: pointer;
+        position: relative;
+
+        .border-x{
+            position: absolute;
+            left: 0;
+            top: -.3125rem;
+            width: 3.25rem;
+            height: .25rem;
+            margin-top: .125rem;
+            @include flexbox();
+            border-bottom: 1px solid #fff;
+            .red{
+                @include flex;
+                background: #C9161D;
+            }
+            .green{
+                @include flex;
+                background: #0C8A3E;
+            }
+        }
+
+        &.url-1{
+            padding: 1rem 1.125rem;
+            display: block;
+            text-align: center;
+            background: #E89095;
+            color:#fff;
+            font-size: .875rem;
+
+            &:hover{
+                background:rgba(232, 144, 149, 0.8);
+            }
+        }
+
+        &.url-2{
+            padding: 1rem 1.125rem;
+            display: block;
+            text-align: center;
+            background: #BBA75C;
+            color:#fff;
+            font-size: .875rem;
+            border-top: 1px solid #fff;
+
+            &:hover{
+                background:rgba(187, 167, 92, 0.8);
+            }
+        }
+    }
+}

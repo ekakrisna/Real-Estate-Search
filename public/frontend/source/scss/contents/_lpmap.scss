@@ -1,0 +1,170 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Maps
+// --------------------------------------------------------------------------
+.lp-map-page {
+    position: relative;
+    overflow-x: hidden;
+
+    .lp-map-canvas {
+        width: 100%;
+        height: 100vh;
+
+        .gmnoprint {
+
+            .gm-style-mtc {
+                display: none !important;
+            }
+        }
+    }
+
+    .lp-sidebar-right-map {
+        position: absolute;
+        top: 10%;
+        right: 2vw;    
+        z-index: 91;
+        width: 20rem;            
+        background: $baseColor_01;            
+        background-color: #FFFC3B;
+        padding: 1rem;        
+
+        @include breakpoint-down(sm) {
+            position: static;            
+            top: 0;
+            right: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+        }
+
+        .lp-content-sidebar {
+            .label-input-black {
+                @include flexbox;
+                @include align-items(center);
+
+                .img-icon-label {
+                    width: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $blackColor_01;
+                }
+
+                @include breakpoint-down(sm) {
+                    span {
+                        font-weight: 100;
+                        font-size: 1rem;
+                        color: $blackColor_01;
+                    }
+                }
+            }
+            .label-input-red {
+                @include flexbox;
+                @include align-items(center);
+
+                .img-icon-label {
+                    width: 1.5rem;
+                    margin-right: 1rem;
+                }
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $mainColor;
+                }
+
+                @include breakpoint-down(sm) {
+                    span {
+                        font-weight: 100;
+                        font-size: 1rem;
+                        color: $mainColor;
+                    }
+                }
+            }
+
+            .lpmap__rangeslider .noUi-target .noUi-base .noUi-connect {
+                background-color: $mainColor;
+            }
+            
+            .lpmap__rangeslider .noUi-target.noUi-horizontal .noUi-handle {
+                border-color: $mainColor;
+            }
+
+            .rangeslider {
+                margin-top: 0;
+                .noUi-target{                    
+                    &.noUi-horizontal{                            
+                        height: 0.2rem;  
+                        
+                        .noUi-handle {
+                            width: 0.6rem;
+                            height: 0.6rem;
+                            border-radius: 50%;
+                            left: 0;
+                            top: -5px;
+                            background-color: $baseColor_02;
+                            border: 2px solid $mainColor;
+                        }
+                    }
+
+                    .noUi-base{
+                        width: calc( 100% - 0.6rem ) !important;
+                        height: 100%;
+                        z-index: 1;
+                        -webkit-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+                    }
+                } 
+            }
+
+            .link-with-icon-times{
+                position: relative;
+                display: block;
+                @include align-items(none);
+                padding-top: 0.625rem;
+                @include transition(.5s all $easeOutExpo);
+            
+                &:hover{
+                    span{
+                        color: $mainColor;
+                    }
+                }
+            
+                img{                    
+                    margin-right: 0.3rem;
+                }
+            
+                span{
+                    font-size: 0.9rem;
+                    color:$blackColor_01;
+                }
+            }
+        }
+    }
+
+    .lp-map-toast {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 90;
+
+        .lp-content-toast {
+            cursor: context-menu;
+            width: 22rem;
+            margin-left: -11rem;
+            opacity: 0.9;
+            margin-top: -12.5px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            padding: .9375rem;
+        }
+    }
+}

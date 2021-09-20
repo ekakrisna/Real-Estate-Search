@@ -1,0 +1,54 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: samueldebruyn/debian-git
+
+pipelines:
+  branches:
+    release/live_deploy:
+      - step:
+          caches:
+            - composer
+          script:
+            - pipe: atlassian/rsync-deploy:0.3.1
+              variables:
+                USER: $AWS_EC2_USER
+                SERVER: $AWS_EC2_HOST
+                REMOTE_PATH: '/usr/share/nginx/real-estate-search/'
+                LOCAL_PATH: '.'
+                EXTRA_ARGS: '--exclude-from=deployment-exclude-list.txt'
+                DEBUG: 'true'
+                SSH_PORT: $AWS_EC2_PORT
+      - step:
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: $AWS_EC2_USER
+                SERVER: $AWS_EC2_HOST
+                COMMAND: 'cd /usr/share/nginx/real-estate-search/ && npm install && npm run dev && php artisan migrate --force && php artisan config:cache'
+                PORT: $AWS_EC2_PORT
+    release/test_deploy:
+      - step:
+          caches:
+            - composer
+          script:
+            - pipe: atlassian/rsync-deploy:0.3.1
+              variables:
+                USER: $AWS_EC2_USER
+                SERVER: $AWS_EC2_HOST
+                REMOTE_PATH: '/usr/share/nginx/real-estate-search-test/'
+                LOCAL_PATH: '.'
+                EXTRA_ARGS: '--exclude-from=deployment-exclude-list.txt'
+                DEBUG: 'true'
+                SSH_PORT: $AWS_EC2_PORT
+      - step:
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: $AWS_EC2_USER
+                SERVER: $AWS_EC2_HOST
+                COMMAND: 'cd /usr/share/nginx/real-estate-search-test/ && npm install && npm run dev && php artisan migrate --force && php artisan config:cache'
+                PORT: $AWS_EC2_PORT
+

@@ -1,0 +1,57 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Parsleyjs validation error styling
+// --------------------------------------------------------------------------
+$error-color: #E23720;
+
+.form-result {
+    .parsley-errors-list {
+        color: $error-color;
+        font-size: .875rem;
+        line-height: 1.6;
+        margin: 0; padding: 0;
+        list-style-type: none;
+    }
+}
+
+.form-control {
+    &.parsley-error {
+        border:2px solid $error-color!important;
+    }
+}
+
+.label-agreement{
+    &.parsley-error{
+
+        .checkmark{
+            border: 2px solid $error-color!important;
+        }
+    }
+}
+.error-notif{
+    position: relative;
+    padding-top: .5rem;
+
+    .text-error{
+        font-size: 1rem;
+        color: $blackColor_02;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+}
+.parsley-required, .parsley-type, .parsley-pattern{
+    padding-top: .5rem;
+    color: $blackColor_02;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.parsley-required, .parsley-equalto{
+    padding-top: .5rem;
+    color: $blackColor_02;
+    font-size: 1rem;
+    font-weight: 700;
+}
+// --------------------------------------------------------------------------

@@ -1,0 +1,156 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Maps
+// --------------------------------------------------------------------------
+.map-page{
+    position: relative;
+    overflow-x: hidden;
+
+    .map-canvas{
+        width: 100%;
+        height: calc(var(--vh, 1) * 100 - 62px);
+
+        &.map-canvas-not-login{
+            @media screen and (max-width: 992px){
+                height: calc(var(--vh, 1) * 100 - 130px);
+            }            
+        }
+
+        .gmnoprint{
+
+            .gm-style-mtc{
+                display: none!important;
+            }
+        }
+    }
+    .btn-filter{
+        position: absolute;
+        z-index: 9;
+        left: 1rem;
+        top: 1rem;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        padding: .75rem 1rem;
+        background: $baseColor_01;
+        cursor: pointer;
+        border:0;
+        border-radius: 1.5rem;
+        box-shadow: 0px 3px 6px #00000029;
+        @include transition(.5s all $easeOutExpo);
+
+        &:hover{
+            background: $baseColor_02;
+        }
+
+        .img-filter{
+            width: 1.5rem;
+            margin-right: .5rem;
+        }
+        span{
+            font-size: .875rem;
+            font-weight: 700;
+            color: $blackColor_01;
+        }
+    }
+
+    .sidebar-left-map{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 91;
+
+        .sidebar-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            background: rgba( 0,0,0, 0.3 );
+            cursor: pointer;
+
+            @include animation( fadeIn .4s $easeOutExpo );
+        }
+
+        .content-sidebar{
+            width: 20rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: $baseColor_01;
+            // padding: .9375rem;
+
+            @include animation-duration( .7s );
+            @include animation-easing( $easeOutExpo );
+
+            @include animation-name( sidebarLeftDown );
+            @include breakpoint-up( md ){
+                @include animation-name( sidebarLeftEnter );
+            }
+
+            @include breakpoint-up(sm){
+                bottom: 0;
+            }
+            @include breakpoint-down(sm){
+                width: 100%;
+                height: auto;
+                padding-bottom: 2rem;
+            }
+
+            .btn-icon-close{
+                position: absolute;
+                right: .9375rem;
+                top: .9375rem;
+                display: inline-block;
+
+                img{
+                    width: 1rem;
+                }
+            }
+
+            .form-filter{
+                padding-top: 3rem;
+
+                .label-input{
+                    @include flexbox;
+                    @include align-items(center);
+                    margin-bottom: 1.625rem;
+
+                    .img-icon-label{
+                        width: 1.5rem;
+                        margin-right: 1rem;
+                    }
+                    span{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: $blackColor_01;
+                    }
+                }
+            }
+        }
+    }
+
+    .map-toast{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 90;
+
+        .content-toast{
+            cursor: context-menu;
+            width: 22rem;
+            margin-left: -11rem;
+            opacity: 0.9;
+            margin-top: -12.5px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            padding: .9375rem;
+        }
+    }
+}

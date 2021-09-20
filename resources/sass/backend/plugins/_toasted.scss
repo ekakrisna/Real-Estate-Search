@@ -1,0 +1,33 @@
+
+.vue-toasted.toasted-container {
+    &.top-right {
+        top: 3.75rem;
+        right: 1rem;
+    }
+
+    .toasted.bubble {
+        &.error {
+            @include box-shadow( 0 0 3rem 0 rgba( 255, 122, 67, 0.2 ));
+        }
+        &.warning {
+            background-color: #ff8b07;
+            @include box-shadow( 0 0 3rem 0 rgba( 255, 139, 7, 0.1 ));
+        }
+        &.success {
+            @include box-shadow( 0 0 3rem 0 rgba( 76, 175, 80, 0.2 ));
+        }
+    }
+
+    @include breakpoint-down( sm ){
+        min-width: auto;
+
+        &.top-right {
+            top: 1.25rem;
+            right: 1rem;
+        }
+
+        .toasted.bubble {
+            border-radius: .3125rem;
+        }
+    }
+}

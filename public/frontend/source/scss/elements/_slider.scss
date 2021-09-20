@@ -1,0 +1,50 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Slider component
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+.slider-side{
+    height: 42.8125rem;
+
+    @include breakpoint-down(md){
+        height: 23.625rem;
+    }
+
+    .swiper-slide {
+        img{
+            width: 100%;
+            margin-bottom: 0;
+            object-fit: cover;
+            object-position: bottom center;
+            height: 100%;
+            @include transition( transform .5s $easeOutExpo );
+        }
+    }
+
+    .swiper-pagination{
+        text-align: left;
+        padding-left: 1.5rem;
+        @include breakpoint-down(md){
+            padding-left: .5rem;
+        }
+
+        .swiper-pagination-bullet{
+            width: .625rem;
+            height: .625rem;
+            background: transparent;
+            border: 1px solid #fff;
+            opacity: 1;
+            border-radius: 0;
+
+            &.swiper-pagination-bullet-active{
+                background: #fff;
+                height: .9375rem;
+                width: .9375rem;
+            }
+        }
+    }
+}
+// --------------------------------------------------------------------------

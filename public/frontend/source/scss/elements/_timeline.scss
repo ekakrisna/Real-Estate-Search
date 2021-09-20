@@ -1,0 +1,104 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Timeline component
+// --------------------------------------------------------------------------
+.timeline{
+    position: relative;
+    .timeline-list{
+        position: fixed;
+        top:11.5625rem;
+        width: 5rem;
+        height: auto;
+        padding: 0;
+        text-align: center;
+        &:before{
+            content:'Timeline';
+            text-align: center;
+            font-size: .75rem;
+        }
+        li{
+            position: relative;
+            list-style-type: none;
+            width: .125rem;
+            margin: 0 auto;
+            background: #0C8A3E;
+            padding-bottom: 2.625rem;
+            &:first-child{
+                margin-top: 1.875rem;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top:0;
+                background: #0C8A3E;
+                transform: translateX(-50%);
+                width: .75rem;
+                height: .75rem;
+                border-radius: 50%;
+            }
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+    @include breakpoint-down(md){
+        .timeline-list{
+            top: 18rem;
+            left:-.5rem;
+        }
+    }
+}
+.timeline-content{
+    &.pt-120{
+        padding-top: 7.5rem;
+
+        &:first-child{
+            padding-top: 5rem;
+        }
+
+        @include breakpoint-down(md){
+            padding-top: 5rem;
+        }
+    }
+
+    .timeline-item{
+        padding-left: 15%;
+        position: relative;
+        .item-heading{
+            .title{
+                color:#606060;
+                font-size: 1.125rem;
+                line-height: 1;
+            }
+            .date-post{
+                color:#0C8A3E;
+                font-size: .875rem;
+            }
+        }
+        .item-body{
+            position: relative;
+            img{
+                width: 100%;
+                padding: 1rem 0 1.5rem;
+            }
+            p{
+                line-height: 2;
+                font-size: 1rem;
+                font-weight: normal;
+                color: #606060;
+            }
+        }
+    }
+}
+.btn-timeline-content{
+    &.pt-120{
+        padding-top: 7.5rem;
+        
+        @include breakpoint-down(md){
+            padding-top: 5rem;
+        }
+    }
+}

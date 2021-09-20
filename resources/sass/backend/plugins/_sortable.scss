@@ -1,0 +1,24 @@
+.sortable {
+    .sortable-item {
+        @include transition( background-color .15s ease-in );
+    }
+    .sortable-chosen {
+        
+        &.sortable-ghost {
+            img, iframe {
+                opacity: 0.6;
+                &.img-thumbnail {
+                    border-style: dashed;
+                    border-color: #17a2b8;
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+}
+.draggable {
+    @include cursor-grab();
+}
+
+
+

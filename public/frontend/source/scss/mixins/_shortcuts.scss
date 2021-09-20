@@ -1,0 +1,138 @@
+// main: _main.scss
+
+// ==========================================================================
+// 	Shortcuts and utilities
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+@mixin clearfix(){
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+// --------------------------------------------------------------------------
+@mixin fixed-fullscreen(){
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	height: 100%; width: 100%;
+}
+// --------------------------------------------------------------------------
+@mixin absolute-fullscreen(){
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	height: 100%; width: 100%;
+}
+// --------------------------------------------------------------------------
+@mixin font-smoothing(){
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+// --------------------------------------------------------------------------
+@mixin app-icon {
+	font-family: "ichijou-icons";
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+	@include font-smoothing;
+}
+@mixin arrow-icon{
+	font-family: "ichijou-arrow";
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+	@include font-smoothing;
+}
+@mixin download-icon{
+	font-family: "ichijou-download";
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+	@include font-smoothing;
+}
+// --------------------------------------------------------------------------
+@mixin font-awesome(){
+	font-family: "Font Awesome 5 Pro";
+	line-height: 1;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	@include font-smoothing;
+}
+// --------------------------------------------------------------------------
+@mixin inline-block-children(){
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+// --------------------------------------------------------------------------
+@mixin not-first-child(){
+	&:not(:first-child){
+		@content;
+	}
+}
+// --------------------------------------------------------------------------
+@mixin not-last-child(){
+	&:not(:last-child){
+		@content;
+	}
+}
+// --------------------------------------------------------------------------
+@mixin only-child(){
+	&:first-child:last-child {
+		@content;
+	}
+}
+// --------------------------------------------------------------------------
+@mixin ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+// --------------------------------------------------------------------------
+@mixin ellipsis-reset {
+	overflow: visible;
+	white-space: normal;
+	text-overflow: inherit;
+}
+// --------------------------------------------------------------------------
+@mixin pseudo(){
+	&:before, &:after {
+		@content;
+	}
+}
+@mixin not-disabled(){
+	&:not(:disabled):not(.disabled){
+		@content;
+	}
+}
+@mixin hover-active-focus(){
+	&:hover, &:focus, &:active {
+		@content;
+	}
+}
+@mixin hover-focus(){
+	&:hover, &:focus {
+		@content;
+	}
+}
+@mixin focus(){
+	&:focus {
+		@content;
+	}
+}
+
+
+// ==========================================================================

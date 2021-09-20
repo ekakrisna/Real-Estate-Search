@@ -1,0 +1,119 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+// No Ui Slider
+// --------------------------------------------------------------------------
+.rangeslider {
+    width: 100%;
+    margin-top: 1.5rem;
+    position: relative;
+
+    .noUi-target,
+    .noUi-target * {
+        position: relative;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -ms-touch-action: none;
+        touch-action: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .noUi-target {
+        direction: ltr;
+        border-radius: 2px;
+
+        &.noUi-horizontal {
+            height: .5rem;
+
+            .noUi-handle {
+                width: .625rem;
+                height: .625rem;
+                border-radius: 50%;
+                left: 0;
+                top: -10px;
+                background-color: $baseColor_02;
+                border: 7px solid $subColor_01;
+            }
+        }
+
+        &.noUi-background {
+            background: $subColor_02;
+        }
+
+        .noUi-base {
+            width: calc( 100% - 1.5rem ) !important;
+            height: 100%;
+            z-index: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            .noUi-origin {
+                position: absolute;
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 2px;
+
+                .noUi-handle {
+                    position: relative;
+                    z-index: 1;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                    cursor: default;
+                    -webkit-box-sizing: content-box !important;
+                    -moz-box-sizing: content-box !important;
+                    box-sizing: content-box !important;
+                }
+
+                &.noUi-background {
+                    background: $subColor_02;
+                }
+            }
+
+            .noUi-connect {
+                background: $subColor_01;
+                -webkit-transition: background 450ms;
+                transition: background 450ms;
+            }
+
+        }
+    }
+
+    .noUi-stacking .noUi-handle {
+        z-index: 10;
+    }
+
+    .noUi-state-tap .noUi-origin {
+        -webkit-transition: left 0.3s, top .3s;
+        transition: left 0.3s, top .3s;
+    }
+
+    .noUi-state-drag * {
+        cursor: inherit !important;
+    }
+
+    /* Handles and cursors;
+     */
+    .noUi-draggable {
+        cursor: w-resize;
+    }
+
+    .noUi-vertical .noUi-draggable {
+        cursor: n-resize;
+    }
+
+    /* Disabled state;
+     */
+    [disabled].noUi-connect,
+    [disabled] .noUi-connect {
+        background: $baseColor_01;
+    }
+
+    [disabled].noUi-origin,
+    [disabled] .noUi-handle {
+        cursor: not-allowed;
+    }
+}

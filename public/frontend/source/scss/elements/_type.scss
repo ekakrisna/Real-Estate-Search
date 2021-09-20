@@ -1,0 +1,121 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------------------
+h1, .h1 { font-size: 2.5rem; };
+h2, .h2 { font-size: 2rem;};
+h3, .h3 { font-size: 1.75rem; };
+h4, .h4 { font-size: 1.5rem; };
+h5, .h5 { font-size: 1.25rem;};
+h6, .h6 { font-size: 1rem; };
+
+.text-14{
+    font-size: .875rem!important;
+}
+
+.light { font-weight: 300!important }
+.bold, strong, .strong { font-weight: 700!important }
+.bolder { font-weight: 900!important }
+// --------------------------------------------------------------------------
+.wrap { white-space: normal !important }
+.nowrap { white-space: nowrap !important }
+.pre-line { white-space: pre-line !important }
+.pre-wrap { white-space: pre-wrap !important }
+// --------------------------------------------------------------------------
+@include breakpoint-up( lg ){
+    .pc-nowrap { white-space: nowrap !important }
+}
+// --------------------------------------------------------------------------
+@include breakpoint-down( md ){
+    .sp-nowrap { white-space: nowrap !important }
+}
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+.ellipsis { @include ellipsis }
+// --------------------------------------------------------------------------
+@include breakpoint-up( lg ){
+    .pc-ellipsis { @include ellipsis }
+}
+// --------------------------------------------------------------------------
+@include breakpoint-down( md ){
+    .sp-ellipsis { @include ellipsis }
+}
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+// Text variations
+// --------------------------------------------------------------------------
+.text-danger { color: #FF0000 !important }
+.text-red { color: #FE4B44 !important }
+.text-silver { color: #aaa !important }
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+// Font sizes
+// --------------------------------------------------------------------------
+.fs-8 { font-size: .5rem !important }
+.fs-9 { font-size: .5625rem !important }
+.fs-10 { font-size: .625rem !important }
+.fs-11 { font-size: .6875rem !important }
+.fs-12 { font-size: .75rem !important }
+.fs-13 { font-size: .8125rem !important }
+.fs-14 { font-size: .875rem !important }
+.fs-15 { font-size: .9375rem !important }
+.fs-16 { font-size: 1rem !important }
+.fs-18 { font-size: 1.125rem !important }
+.fs-20 { font-size: 1.25rem !important }
+.fs-22 { font-size: 1.375rem !important }
+.fs-24 { font-size: 1.5rem !important }
+.fs-26 { font-size: 1.625rem !important }
+.fs-28 { font-size: 1.75rem !important }
+.fs-30 { font-size: 1.875rem !important }
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+// Font weights
+// --------------------------------------------------------------------------
+.fw-thin, .fw-200 { font-weight: 200 !important }
+.fw-light, .fw-300 { font-weight: 300 !important }
+.fw-normal, .fw-400 { font-weight: 400 !important }
+.fw-bold, .fw-700 { font-weight: 700 !important }
+.fw-black, .fw-900 { font-weight: 900 !important }
+// --------------------------------------------------------------------------
+
+
+// --------------------------------------------------------------------------
+// Default font-families
+// --------------------------------------------------------------------------
+.ff-default, .ff-base {
+    font-family: "Yu Mincho", "游明朝体",  YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Serif font families
+// --------------------------------------------------------------------------
+.ff-serif { font-family: Georgia, serif !important }
+.ff-latino-serif { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important }
+.ff-roman-serif { font-family: "Times New Roman", Times, serif !important }
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Sans serif font families
+// --------------------------------------------------------------------------
+.ff-sans { font-family: Arial, Helvetica, sans-serif !important }
+.ff-verdana-sans { font-family: Verdana, Geneva, sans-serif !important }
+.ff-tahoma-sans { font-family: Tahoma, Geneva, sans-serif !important }
+.ff-lucida-sans { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important }
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Monospace font families
+// --------------------------------------------------------------------------
+.ff-mono { font-family: "Courier New", Courier, monospace !important }
+.ff-lucida-mono { font-family: "Lucida Console", Monaco, monospace !important }
+// --------------------------------------------------------------------------

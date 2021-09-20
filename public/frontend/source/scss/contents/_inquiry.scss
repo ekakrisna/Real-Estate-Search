@@ -1,0 +1,103 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Inquiry
+// --------------------------------------------------------------------------
+.inquiry-section{
+    position: relative;
+    padding-top: 3rem;
+    overflow-x: hidden;
+    background: $baseColor_01;
+
+    @include breakpoint-down(md){
+        padding-top: 2rem;
+    }
+
+    .content{
+
+        .content-header{
+            .title{
+                font-size: 1.125rem;
+                padding-bottom: 1.6875rem;
+                font-weight: 700;
+            }
+        }
+
+        .content-body{
+
+            .form{
+
+                .mb-48{
+                    margin-bottom: 3rem;
+
+                    @include breakpoint-down(md){
+                        margin-bottom: 2.5rem;
+                    }
+                }
+
+                .mt-28{
+                    display: none;
+                    margin-top: 1.75rem;
+                }
+
+                label{
+                    font-size: 1rem;
+                    margin-bottom: .75rem;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                textarea.form-control{
+                    position: relative;
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                    height: auto;
+                    padding: 1rem;
+                    min-height: 7.1875rem;
+
+                    @include breakpoint-down(md){
+                        min-height: 9.375rem;
+                    }
+                }
+
+                .form-select{
+                    position: relative;
+
+                    select{
+                        &.form-control{
+                            position: relative;
+                            outline: none;
+                            box-shadow: none;
+                            border: none;
+                            height: auto;
+                            padding: .75rem 1rem;
+                            font-size: 1rem;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+                    }
+
+                    .fa-chevron-down{
+                        position: absolute;
+                        top: 50%;
+                        right: 1rem;
+                        color: $blackColor_02;
+                        @include translateY(-50%);
+                    }
+
+                    .parsley-errors-list{
+                        position: absolute;
+                        top: 3.25rem;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

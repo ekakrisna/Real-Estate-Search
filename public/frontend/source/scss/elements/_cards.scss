@@ -1,0 +1,41 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Cards
+// --------------------------------------------------------------------------
+
+.card {
+    &.card-reward {
+        border: 0;
+        color: #666666;
+        margin: 0 auto;
+        max-width: 35.625rem;
+        padding: 0 .9375rem;
+
+        .card-innerset {
+            background-color: #F5F5F5;
+        }
+
+        .card-body {
+            padding: 2.5rem 2.25rem;
+        }
+
+        .card-title {
+            font-size: 1.875rem;
+        }
+
+        .reward {
+            width: 15rem;
+            position: absolute;
+            right: 0; bottom: -1rem;
+            @include transform( translateX( 50% ) translateY( 50% ));
+
+            @include breakpoint-down( sm ){
+                width: 10rem;
+                @include transform( translateX( 0 ) translateY( 50% ));
+            }
+        }
+    }
+}
+// --------------------------------------------------------------------------

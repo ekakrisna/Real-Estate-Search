@@ -1,0 +1,14 @@
+{
+    "/backend/dist/js/app.js": "/backend/dist/js/app.js",
+    "/backend/dist/css/app.css": "/backend/dist/css/app.css",
+    "/frontend/assets/css/base.css": "/frontend/assets/css/base.css",
+    "/frontend/assets/css/banner.css": "/frontend/assets/css/banner.css",
+    "/frontend/assets/css/contents.css": "/frontend/assets/css/contents.css",
+    "/frontend/assets/css/elements.css": "/frontend/assets/css/elements.css",
+    "/frontend/assets/css/footer.css": "/frontend/assets/css/footer.css",
+    "/frontend/assets/css/header.css": "/frontend/assets/css/header.css",
+    "/frontend/assets/css/main.css": "/frontend/assets/css/main.css",
+    "/frontend/assets/css/sidebar.css": "/frontend/assets/css/sidebar.css",
+    "/backend/dist/js/parsley.js": "/backend/dist/js/parsley.js",
+    "/backend/dist/js/vue.js": "/backend/dist/js/vue.js"
+}

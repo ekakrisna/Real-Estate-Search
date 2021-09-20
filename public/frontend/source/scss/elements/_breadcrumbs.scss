@@ -1,0 +1,58 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Breadcrumbs
+// --------------------------------------------------------------------------
+
+.breadcrumbs {
+    width: 100%;
+    padding-top: 1.5rem;
+
+    .breadcrumb-list {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        list-style: none;
+        @include flexbox();
+
+        .breadcrumb-item {
+            color: #0C8A3E;
+            font-size: .75rem;
+            position: relative;
+
+            &.active {
+                color: #606060;
+            }
+
+            &:not( :first-child ):before {
+                content: '\63';
+                font-size: .5rem;
+                font-weight: 600;
+                position: relative;
+                line-height: inherit;
+
+                @include app-icon;
+                @include transition( transform .4s $easeOutExpo );
+            }
+        }
+
+    }
+}
+@include breakpoint-down( md ){
+    .breadcrumbs {
+        padding-top: 0;
+
+        .breadcrumb-list {
+            @include align-items( center );
+            @include justify-content( center );
+
+            .breadcrumb-item {
+                font-size: .875rem;
+                &:not( :first-child ):before{
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+}

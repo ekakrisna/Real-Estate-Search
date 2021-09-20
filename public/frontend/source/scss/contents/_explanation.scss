@@ -1,0 +1,125 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Explanation
+// --------------------------------------------------------------------------
+.section-explanation{
+    position: relative;
+    padding: 4rem 0 0;
+    overflow-x: hidden;
+    background: #fff;
+
+    .content{
+        .content-header{
+            text-align: center;
+            padding-bottom: 5rem;
+
+            .title{
+                font-size: 1.5rem;
+                color: #000;
+                font-weight: 700;
+                line-height: 1.5;
+
+                @include breakpoint-down(sm){
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        .content-body{
+            .content-point-link{
+                padding-bottom: 5rem;
+
+                .item-link{
+                    @include flexbox;
+                    @include align-items(flex-end);
+                    padding-bottom: 1rem;
+
+                    .numbering{
+                        @include flexbox;
+                        @include flex-direction(column);
+                        padding-right: 1.875rem;
+
+                        .text-point{
+                            font-size: .875rem;
+                            font-weight: 400;
+                            color: #000;
+                        }
+                        .text-numb{
+                            font-size: 2.375rem;
+                            font-family: 'Anton', sans-serif;
+                            line-height: 1;
+                        }
+                    }
+                    .item-link-target{
+                        padding-bottom: .5rem;
+
+                        span{
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            color: #0645AD;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .content-information{
+                position: relative;
+                padding-bottom: 5rem;
+
+                .information-header{
+                    text-align: center;
+                    padding-bottom: 2.5rem;
+
+                    .title{
+                        display: inline-block;
+                        position: relative;
+                        margin-bottom: 2.5rem;
+
+                        @include breakpoint-down(sm){
+                            margin-bottom: 2rem;
+                        }
+
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            bottom: -.5rem;
+                            left: 50%;
+                            width: 6.25rem;
+                            height: 1px;
+                            background: #C7C7C7;
+                            @include translateX(-50%);
+                        }
+
+                        span{
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            color: #000;
+                        }
+                    }
+
+                    .subtitle{
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                        color: #000;
+                    }
+                }
+                .information-body{
+
+                    .content-img{
+                         padding-bottom: 2.5rem;
+                    }
+                    .text{
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}

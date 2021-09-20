@@ -1,0 +1,55 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Select2 - custom selectbox plugin with customizable options
+// --------------------------------------------------------------------------
+
+.select2-container {
+    font-size: .875rem;
+    display: block;
+    outline: none !important;
+
+    .select2-selection {
+        outline: none !important;
+    }
+
+    .select2-selection--single {
+        min-height: 2.5rem;
+        border: 1px solid #4C4C4C;
+        border-radius: 1px;
+
+        .select2-selection__rendered {
+            height: 100%;
+        }
+    }
+
+    .custom-selection, .custom-option {
+        height: 100%;
+        margin: 0 .5rem;
+        @include flexbox();
+    }
+    .custom-option {
+        height: 2rem;
+    }
+}
+.select2-dropdown {
+    border-radius: .125rem;
+    border: 1px solid #4C4C4C;
+}
+.select2-container--default {
+    .select2-selection--single {
+        .select2-selection__arrow {
+            height: auto;
+            bottom: 1px;
+            width: 1.625rem;
+        }
+    }
+}
+// --------------------------------------------------------------------------
+.select2-search--dropdown {
+    .select2-search__field {
+        outline: none !important;
+        border-color: #c67a29;
+    }
+}

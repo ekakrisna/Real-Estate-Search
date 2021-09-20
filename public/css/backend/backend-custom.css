@@ -1,0 +1,267 @@
+/* override old value*/
+
+a {
+    color: #17a2b8;
+}
+body {
+    font-size: 0.85rem;
+}
+.content-header h1.h1title{
+    font-size: 1.5rem !important;
+}
+.rightNavbar li{
+    font-size: 0.8rem;
+}
+.btn-warning {
+    color: #fff;
+}
+.page-item.active .page-link {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.page-link {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #17a2b8;
+}
+#nav-left > li {
+    margin-bottom: 15px;
+}
+#nav-left i {
+    font-size: 14px;
+}
+.btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active, .show > .btn-warning.dropdown-toggle {
+    color: #FFFFFF;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: '>\00a0';
+    color: #acacac;
+}
+li.breadcrumb-item {
+    font-size: 0.75rem;
+}
+div#alert-wrapper {
+    padding: 15px;
+}
+div#alert-wrapper ul, div#alert-wrapper ol{
+    margin-bottom: 0px;
+}
+.note-toolbar.panel-heading {
+    background: #efefef;
+}
+.image-preview {
+    width: 120px;
+    margin-top: 10px;
+    position: relative;
+}
+.remove-image {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+body div#datatable_processing {
+    background: #000000ba;
+    color: #fff;
+    position: fixed;
+    top: 20% !important;
+    bottom: auto;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    margin-bottom: 0px;
+    border-bottom: 1px dashed #eaeaea;
+}
+span.brand-text {
+    letter-spacing: 3px;
+}
+.btn-group-normal a {
+    margin: 0 3px;
+}
+.btn-group-normal .fa-edit {
+    margin-right: -4px;
+}
+.field-group.is-invalid {
+    border: 1px solid #dc3545;
+    padding: 10px;
+}
+.actionDatatables {
+    min-width: 100px;
+}
+.img-lang {
+    width: 30px;
+}
+span.span-locale {
+    text-transform: uppercase;
+}
+.icheck-cyan label {
+    min-width: 110px;
+}
+.icheck-cyan.d-inline {
+    display: inline-block !important;
+}
+body label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: normal;
+}
+
+/* Sidebar */
+.brand-text {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Form */
+.label-required {
+    font-size: 8.5px;
+    top: -4px;
+    position: relative;
+    padding: 3px;
+}
+.field-title {
+    font-size: 17px;
+    display: block;
+}
+.error {
+    color: red;
+}
+
+/* Parsley */
+.parsley-errors-list {
+    list-style: none;
+    padding: 5px 0;
+    font-size: 12px;
+    color: #dc3545;
+}
+
+/* Datatables */
+.actionDatatables{
+    border-left: 1px solid #dee2e6 !important;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+}
+
+.card-header-link a {
+    margin-left: 10px;
+    float: right;
+}
+#datatable tbody tr > td:last-of-type {
+    text-align: center;
+}
+
+/* Custom Font Size Base */
+.custom-select-sm{
+    font-size: 14px;
+}
+.label-required{
+ font-size: 12px;
+ top: -2px;   
+}
+.btn-group-normal a{
+    font-size: 15px;
+}
+li.breadcrumb-item{
+    font-size: 16px;
+}
+#datatables_wrapper .row:nth-child(3){
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#datatables_wrapper .row:nth-child(3) ul{
+    display: flex;
+    justify-content: center;
+}
+
+.dataTables_paginate {
+    margin-bottom: 20px !important;
+}
+
+#datatables_previous{
+    display: none;
+}
+
+#datatables_next{
+    display: none;
+}
+
+.paginate_button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.paginate_button a {
+    border-radius: 5px !important;
+    color: #707070 !important;
+    border-color: #707070;
+}
+
+.paginate_button.active a {
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+
+.flag_checkbox_true::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+    content: "\f024";
+    color: #D3D3D3;
+}
+.flag_checkbox_true.checked::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+    content: "\f024";
+    color: #000;
+}
+
+.bottom-0{
+	bottom : 0;
+}
+
+.modal-loading {
+    background: #00000042;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 999;
+    color: #ffffff;
+    font-size: 50px;
+}
+.modal-loading .fas {
+    position: fixed;
+    top: 100px;
+}
+.image_selected {
+    border: 1px solid #17a2b8;
+    opacity: 0.6;
+}
+
+.image_box{
+    position: relative;
+}
+
+.image_selected_button{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #4ea7f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

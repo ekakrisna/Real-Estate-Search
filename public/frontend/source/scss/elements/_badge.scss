@@ -1,0 +1,124 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Badge
+// --------------------------------------------------------------------------
+
+.badge {}
+.badge-gradient {
+    color: #fff;
+    padding: .125rem .375rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    border-radius: 0;
+    height: 1.5rem; min-width: 4.375rem;
+    $gradient-start: rgba(90,83,81,0.78) 0%;
+    $gradient-between: rgba(149,142,140,0.43) 83%;
+    $gradient-end: rgba(255,246,242,0) 100%;
+
+    @include linear-gradient( to right, $gradient-start, $gradient-between, $gradient-end );
+}
+
+.badge-primary{
+    color: #fff;
+    padding: .125rem .375rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    border-radius: 0;
+    height: 1.5rem;
+    min-width: 4.375rem;
+    background: #F1645C;
+}
+
+.badge-required, .badge-optional {
+    color: #fff;
+    border-radius: 0;
+    font-size: .6875rem;
+    font-weight: normal;
+    line-height: 1rem;
+    padding: 0 .3125rem;
+    background-color: #F1645C;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.badge-optional {
+    background-color: #1F8A3E;
+}
+
+.badge-numbering {
+    display: inline-block;
+    width: 1.25rem; height: 1.25rem;
+    border: 1px solid #EBEBEB;
+    border-radius: 50%;
+    font-size: .875rem;
+    font-weight: bold;
+    @include inline-flex;
+    @include align-items( center );
+    @include justify-content( center );
+
+    &.badge-lg {
+        width: 1.875rem; height: 1.875rem;
+        font-size: 1rem;
+    }
+}
+
+.badges{
+    min-width: 2.375rem;
+    font-size: .5rem;
+    text-align: center;
+
+    &.badge-orange{
+        background: #DE8E17!important;
+        color:#fff;
+    }
+
+    &.badge-green{
+        background: #709A67!important;
+        color:#fff;
+        padding: 1px .625rem!important;
+    }
+    &.badge-pink{
+        background: #E89095!important;
+        color: #fff;
+        padding: 1px .625rem!important;
+    }
+}
+// --------------------------------------------------------------------------
+
+
+.bg-badge{
+    position: relative;
+    font-size: .875rem;
+    font-weight: 400;
+    padding: .5rem;
+    border-radius: .25rem;
+    line-height: 1;
+    color: $baseColor_02;
+    // margin-bottom: .5rem;
+    text-align: center;
+    // min-width: 6.25rem;
+
+    &.badge-green{
+        background: #66980F;
+    }
+    &.badge-blue{
+        background: #0089D2;
+    }
+    &.badge-tosca{
+        background: #118694;
+    }
+    &.badge-red{
+        background: #FE4B44;
+        // min-width: 4.6875rem;
+    }
+    &.badge-orange{
+        background: #DE8E17;
+    }
+    &.badge-gray{
+        background: #808080;
+    }
+}

@@ -1,0 +1,38 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// jQuery Confirm alert
+// --------------------------------------------------------------------------
+.jconfirm {
+    font-size: .875rem;
+
+    .jconfirm-box {
+        padding: 25px 30px 10px;
+
+        &.jconfirm-type-orange {
+            border-top: 5px solid #FE7032;
+            .jconfirm-title-c .jconfirm-icon-c {
+                color: #FE7032 !important;
+            }
+        }
+    }
+
+    .jconfirm-buttons {
+        .btn {
+            height: auto;
+            min-width: 6.25rem;
+        }
+    }
+}
+// --------------------------------------------------------------------------
+
+@keyframes type-orange {
+    1%,
+    100% {
+        border-color: #FE7032;
+    }
+    50% {
+        border-color: lighten( #FE7032, 5% );
+    }
+}

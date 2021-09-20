@@ -1,0 +1,92 @@
+// main: ../main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// SignUp
+// --------------------------------------------------------------------------
+.full-screen{
+    height: calc(var(--vh, 1) * 100 - 62px);
+        &{@include breakpoint-down(sm){
+            height: calc(var(--vh, 1) * 100 - 130px);
+            }
+        }     
+}
+
+.section-signup{
+    position: relative;
+    padding: 3rem 0;
+    background: $baseColor_01;
+
+    @include breakpoint-down(md){
+        padding: 2rem 0;
+    }
+
+    .form-signup{
+
+        .form-with-icon{
+            position: relative;
+            margin-bottom: 1rem;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            i{
+                position: absolute;
+                top: 50%;
+                left: .9375rem;
+                @include translateY(-50%);
+                font-size: 1.25rem;
+                color: $mainColor;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"]{
+                &.form-control{
+                    padding-left: 3.125rem;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    border:0;
+                    border-radius: .25rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    min-height: 3.5rem;
+
+                    &::placeholder{
+                        color: $blackColor_03;
+                    }
+                }
+            }
+        }
+
+        .form-agreement{
+            position: relative;
+            @include flexbox;
+            @include justify-content(center);
+
+            &.agreement{
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+            .label-agreement{
+                font-size: 1rem;
+                color: $mainColor;
+                font-weight: 400;
+                margin:1.5rem 0 0;
+
+                i{
+                    padding-left: .5rem;
+                    font-size: 1rem;
+                    color: $mainColor;
+                }
+            }
+
+            .label-stay-login{
+                font-size: 1rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+}

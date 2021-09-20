@@ -1,0 +1,95 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// Selectric - custom selectbox plugin with customizable options
+// --------------------------------------------------------------------------
+
+.custom-selectric {
+    .selectric-wrapper {
+        .custom-option {
+            .option-column {
+                @include flexbox;
+                @include align-items( center )
+            }
+            .option-column ~ .option-column {
+                text-align: right;
+                @include justify-content( flex-end );
+
+                .flag {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}
+// --------------------------------------------------------------------------
+.selectric-form-control {
+    .selectric {
+        color: #606060;
+        border-radius: 1px;
+        border: 1px solid #606060;
+        background-color: #fff;
+
+        .label {
+            min-height: 3.25rem;
+            font-size: .875rem;
+            line-height: 1.5rem;
+            padding: .875rem 1.5rem;
+            margin-left: 0;
+        }
+
+        .button {
+            color: #fff;
+            font-size: 1rem;
+            width: 24px; height: 100%;
+            background-color: #C8B572;
+            border-left: 1px solid #606060;
+            @include flexbox;
+            @include align-items( center );
+            @include justify-content( center );
+
+            &:after { display: none }
+        }
+    }
+    .selectric-items {
+        border: 0;
+        color: #fff;
+        padding: .5rem 0;
+        border-radius: .3125rem;
+        background-color: #868686;
+
+        li {
+            color: #fff;
+            padding: 4px 22px;
+            font-size: .875rem;
+            position: relative;
+
+            &.selected, &.highlighted {
+                background-color: transparent;
+            }
+
+            &.selected {
+                font-weight: 700;
+
+                &:before {
+                    content: "\f00c";
+                    @include font-awesome;
+                    position: absolute;
+                    font-size: 12px;
+                    font-weight: 400;
+                    left: .375rem; top: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.selectric-form-control-compact {
+    width: 100%;
+
+    @include breakpoint-up( sm ){
+        width: 15.9375rem;
+    }
+}
+// --------------------------------------------------------------------------

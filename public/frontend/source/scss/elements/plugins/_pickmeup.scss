@@ -1,0 +1,298 @@
+// main: ../_main.scss
+// --------------------------------------------------------------------------
+
+// --------------------------------------------------------------------------
+// PickMeUp custom datepicker
+// --------------------------------------------------------------------------
+
+.pickmeup {
+    padding: 0;
+    z-index: 90;
+    color: #5C3913;
+    border-radius: .25rem;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    font-size: .875rem; line-height: 2.5rem;
+
+    @include box-sizing( border-box );
+    @include box-shadow( 0 .125rem 1.25rem rgba( 0,0,0, 0.1 ));
+
+    @include animation-name( slightInUp );
+    @include animation-duration( 500ms );
+    @include animation-timing-function( $easeOutExpo );
+
+    @include flexbox;
+
+    .pmu-instance {
+        color: inherit;
+        height: auto;
+        width: 19.5rem;
+        padding: .375rem .25rem;
+
+        & > nav:first-child {
+            color: inherit;
+            @include flexbox;
+
+            & > * {
+                height: 2.5rem;
+                margin: .125rem;
+                background-color: #FBFBFC;
+                border-radius: .3125rem;
+                @include transition( background-color .2s );
+
+                &:hover {
+                    background-color: #efeff3;
+                }
+            }
+
+            .pmu-prev, .pmu-next {
+                color: inherit;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+
+            .pmu-month {
+                width: auto;
+                color: inherit;
+                @include flex( 1 1 auto );
+
+                @include flexbox;
+                @include align-items( center );
+                @include justify-content( center );
+            }
+        }
+
+        .pmu-day-of-week {
+            color: #d58733;
+            div {
+                color: inherit;
+                width: 14.285%; height: 2.5rem;
+                @include flex( 0 0 14.285% );
+
+                @include flexbox;
+                @include align-items( center );
+                @include justify-content( center );
+            }
+        }
+
+        .pmu-days {
+            color: inherit;
+            @include flexbox;
+            @include flex-wrap( wrap );
+
+            .pmu-button {
+                color: inherit;
+                cursor: pointer; height: 2.5rem;
+                width: calc( 100% / 7 - ( .25rem ));
+                @include flex( 0 0 auto );
+
+                margin: .125rem;
+                background-color: #FBFBFC;
+                border-radius: .3125rem;
+                @include transition( background-color .2s );
+
+                @include flexbox;
+                @include align-items( center );
+                @include justify-content( center );
+
+                &:not(.pmu-not-in-month):not(.pmu-disabled):not(.pmu-today):not(.pmu-selected){
+                    &:hover {
+                        background-color: #efeff3;
+                    }
+                }
+
+                .date-cell {
+                    width: 100%; height: 100%;
+
+                    @include flexbox;
+                    @include flex-direction( column );
+                    @include align-items( center );
+                    @include justify-content( center );
+
+                }
+
+                .date-alt {
+                    width: auto;
+                    color: lighten( #5C3913, 20% );
+                    font-size: 80%;
+                    line-height: 1.2;
+                }
+            }
+
+            .pmu-not-in-month, .pmu-disabled {
+                $color: #C9CBD5;
+                color: $color;
+                .date-alt {
+                    color: lighten( $color, 5% );
+                }
+            }
+
+            .pmu-today, .pmu-today:hover {
+                color: #fff;
+                font-weight: bold;
+                border-radius: 50%;
+                background-color: #FF4E00;
+            }
+
+            .pmu-selected:not(.pmu-not-in-month):not(.pmu-disabled),
+            .pmu-selected:not(.pmu-not-in-month):not(.pmu-disabled):hover {
+                $color: #FF4E00;
+
+                color: $color;
+                font-weight: bold;
+
+                .date-alt {
+                    color: lighten( $color, 5% );
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    &.pmu-view-months {
+        .pmu-instance {
+            .pmu-months {
+                color: inherit;
+
+                @include flexbox;
+                @include flex-wrap( wrap );
+
+                .pmu-button {
+                    width: 20%;
+                    height: 3.75rem;
+                    color: inherit;
+                    @include flex( 1 1 auto );
+
+                    margin: .125rem;
+                    background-color: #FBFBFC;
+                    border-radius: .3125rem;
+                    @include transition( background-color .2s );
+
+                    @include flexbox;
+                    @include align-items( center );
+                    @include justify-content( center );
+
+                    &:not(.pmu-selected):hover {
+                        background-color: #efeff3;
+                    }
+                }
+
+                .pmu-selected, .pmu-selected:hover {
+                    color: #fff;
+                    font-weight: bold;
+                    background-color: #FF4E00;
+                }
+            }
+        }
+    }
+
+    &.pmu-view-years {
+        .pmu-instance {
+            .pmu-years {
+                color: inherit;
+
+                @include flexbox;
+                @include flex-wrap( wrap );
+
+                .pmu-button {
+                    width: 20%;
+                    height: 3.75rem;
+                    color: inherit;
+                    @include flex( 1 1 auto );
+
+                    margin: .125rem;
+                    background-color: #FBFBFC;
+                    border-radius: .3125rem;
+                    @include transition( background-color .2s );
+
+                    @include flexbox;
+                    @include align-items( center );
+                    @include justify-content( center );
+
+                    &:not(.pmu-selected):hover {
+                        background-color: #efeff3;
+                    }
+                }
+
+                .pmu-selected, .pmu-selected:hover {
+                    color: #fff;
+                    font-weight: bold;
+                    background-color: #FF4E00;
+                }
+            }
+        }
+    }
+
+    &:not(.pmu-view-days) {
+        .pmu-days, .pmu-day-of-week { display: none }
+    }
+    &:not(.pmu-view-months) .pmu-months,
+    &:not(.pmu-view-years) .pmu-years {
+        display: none
+    }
+
+    &.pmu-fullscreen {
+        border: 0;
+        z-index: 9000;
+        position: fixed;
+        top: 0 !important; left: 0 !important;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.7);
+
+        @include justify-content( center );
+        @include align-items( center );
+
+        &:not(.pmu-hidden ){
+            @include flexbox;
+        }
+
+        .pmu-instance {
+            width: 21rem;
+            position: relative;
+            background-color: #fff;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+
+            &:first-child {
+                margin-left: .625rem;
+                padding-left: 1rem;
+                padding-right: .5rem;
+                border-top-left-radius: .25rem;
+                border-bottom-left-radius: .25rem;
+            }
+            &:last-child {
+                margin-right: .625rem;
+                padding-right: 1rem;
+                padding-left: .5rem;
+                border-top-right-radius: .25rem;
+                border-bottom-right-radius: .25rem;
+            }
+        }
+
+        .pmu-close {
+            opacity: 0.6;
+            color: #fff;
+            font-size: 1.25rem;
+
+            cursor: pointer;
+            position: absolute;
+            border: 2px solid #fff;
+            border-radius: .25rem;
+            height: 2rem; width: 2.5rem;
+            top: -2.25rem; right: -2.5rem;
+
+            @include flexbox;
+            @include justify-content( center );
+            @include align-items( center );
+
+            @include transition( opacity .2s );
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+// --------------------------------------------------------------------------
